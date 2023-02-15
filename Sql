@@ -1,0 +1,1 @@
+select c.CategoryName, count(p.ProductID)  from Products p join Categories c on c.CategoryID = p.CategoryID group by c.CategoryName; select c.CategoryName, count(o.OrderId) from Orders o join [Order Details] od on od.OrderID = o.OrderID join Products p on p.ProductID = od.ProductID join Categories c on c.CategoryID = p.CategoryID group by c.CategoryName;
